@@ -1,8 +1,8 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#mirror
 
-import { ScadVector } from '../types/ScadVector';
-import type { Chainable } from '../util/Chainable';
-import { ITransformation, transformation } from './internals';
+import { ScadVector } from '../types/ScadVector.js';
+import type { Chainable } from '../util/Chainable.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Mirror = ITransformation<'mirror', { v: ScadVector }>;
 

@@ -1,9 +1,9 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color
 
-import { ScadColor } from '../types/ScadColor';
-import { ScadNumber } from '../types/ScadNumber';
-import type { Chainable } from '../util/Chainable';
-import { ITransformation, transformation } from './internals';
+import { ScadColor } from '../types/ScadColor.js';
+import { ScadNumber } from '../types/ScadNumber.js';
+import type { Chainable } from '../util/Chainable.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Color = ITransformation<
   'color',

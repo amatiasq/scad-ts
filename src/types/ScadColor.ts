@@ -1,4 +1,4 @@
-import { ScadNumber } from './ScadNumber';
+import { ScadNumber } from './ScadNumber.js';
 
 type RGB = [ScadNumber, ScadNumber, ScadNumber];
 type RGBA = [ScadNumber, ScadNumber, ScadNumber];

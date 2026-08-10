@@ -1,4 +1,4 @@
-import { ScadNumber } from './ScadNumber';
+import { ScadNumber } from './ScadNumber.js';
 
 export type ScadVector2<T = ScadNumber> = readonly [T, T] | [T, T];
 export type ScadVector3<T = ScadNumber> = readonly [T, T, T] | [T, T, T];

@@ -1,36 +1,36 @@
 {
   "name": "scad-ts",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Generate OpenSCAD solid models with typescript",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "author": "20lives",
   "license": "MIT",
-  "private": false,
   "homepage": "https://github.com/amatiasq/scad-ts#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/amatiasq/scad-ts.git"
+    "url": "git+https://github.com/amatiasq/scad-ts.git"
   },
   "bugs": {
     "url": "https://github.com/amatiasq/scad-ts/issues"
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "bin": {
-    "openscad": "./openscad.sh"
+    "openscad": "./bin/openscad.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "test": "jest",
-    "build": "npm run build:mjs && npm run build:js",
-    "build:js": "tsc -m commonjs",
-    "build:mjs": "tsc && npm run build:mjs:hack",
-    "build:mjs:hack": "find ./dist/ -name '*.js' -exec bash -c 'mv \"$1\" \"${1%.js}\".mjs' - '{}' \\;",
-    "prepublish": "npm run test && npm run build"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   }
 }

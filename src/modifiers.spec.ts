@@ -1,5 +1,5 @@
-import assert from 'assert';
-import { square, union } from '../src/index';
+import assert from 'node:assert';
+import { square, union } from './index.js';
 
 describe('disable', () => {
   const expected = { type: '*', children: square() };

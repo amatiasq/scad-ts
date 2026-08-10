@@ -1,9 +1,9 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/2D_to_3D_Extrusion#Rotate_Extrude
 
-import { ScadNumber } from '../../types/ScadNumber';
-import { ScadRoundingVariables } from '../../types/ScadRoundingVariables';
-import { Chainable } from '../../util/Chainable';
-import { ITransformation, transformation } from '../internals';
+import { ScadNumber } from '../../types/ScadNumber.js';
+import { ScadRoundingVariables } from '../../types/ScadRoundingVariables.js';
+import { Chainable } from '../../util/Chainable.js';
+import { ITransformation, transformation } from '../internals.js';
 
 type Params = { convexity?: number } & ScadRoundingVariables;
 

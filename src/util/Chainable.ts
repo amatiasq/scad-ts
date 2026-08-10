@@ -1,7 +1,7 @@
-import * as modifiers from '../modifiers';
-import * as transformations from '../transformations/index';
-import { Scad } from '../types/Scad';
-import { ScadSerializeMethod, serializable } from './Serializable';
+import * as modifiers from '../modifiers.js';
+import * as transformations from '../transformations/index.js';
+import { Scad } from '../types/Scad.js';
+import { ScadSerializeMethod, serializable } from './Serializable.js';
 
 // this has to be an interface because `type` would be duplicated in .d.ts files
 export interface ScadMethods extends ScadSerializeMethod {

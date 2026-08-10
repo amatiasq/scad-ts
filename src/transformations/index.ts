@@ -1,13 +1,13 @@
-import type { Color } from './color';
-import type { LinearExtrude } from './extrusion/linear_extrude';
-import type { RotateExtrude } from './extrusion/rotate_extrude';
-import type { Mirror } from './mirror';
-import type { Offset } from './offset';
-import type { Projection } from './projection';
-import type { Resize } from './resize';
-import type { Rotate } from './rotate';
-import type { Scale } from './scale';
-import type { Translate } from './translate';
+import type { Color } from './color.js';
+import type { LinearExtrude } from './extrusion/linear_extrude.js';
+import type { RotateExtrude } from './extrusion/rotate_extrude.js';
+import type { Mirror } from './mirror.js';
+import type { Offset } from './offset.js';
+import type { Projection } from './projection.js';
+import type { Resize } from './resize.js';
+import type { Rotate } from './rotate.js';
+import type { Scale } from './scale.js';
+import type { Translate } from './translate.js';
 
 export type Transformation =
   | Color
@@ -21,13 +21,13 @@ export type Transformation =
   | Scale
   | Translate;
 
-export * from './color';
-export * from './extrusion/linear_extrude';
-export * from './extrusion/rotate_extrude';
-export * from './mirror';
-export * from './offset';
-export * from './projection';
-export * from './resize';
-export * from './rotate';
-export * from './scale';
-export * from './translate';
+export * from './color.js';
+export * from './extrusion/linear_extrude.js';
+export * from './extrusion/rotate_extrude.js';
+export * from './mirror.js';
+export * from './offset.js';
+export * from './projection.js';
+export * from './resize.js';
+export * from './rotate.js';
+export * from './scale.js';
+export * from './translate.js';

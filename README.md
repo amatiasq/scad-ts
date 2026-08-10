@@ -1,55 +1,76 @@
-<h1 align="center">
-  <img src="https://i.imgur.com/IiI57LR.png" alt="scad-js" height="128"> SCAD-JS
-</h1>
+# scad-ts
 
-> **scad-js** transpile your Javascript to **OpenSCAD** letting you create programmatic 3d solid models with the familiar javascript syntax.
+Generate [OpenSCAD](https://www.openscad.org) solid models with TypeScript.
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/scad-js">
-    <img alt="Latest release" src="https://img.shields.io/npm/v/scad-js?style=for-the-badge">
-    <img alt="Codecov coverage" src="https://img.shields.io/codecov/c/github/scad-js/scad-js?style=for-the-badge">
-    <img alt="Build passing" src="https://img.shields.io/travis/scad-js/scad-js?style=for-the-badge">
-  </a>
-  <a href="https://www.npmjs.com/package/scad-js">
-    <img alt="scad-js demo" src="https://i.imgur.com/GhjNUxM.gif">
-  </a>
-</p>
+```ts
+import { cube, cylinder, difference } from 'scad-ts';
 
-**OpenSCAD** is an amazing software for creating solid 3D CAD objects, but modeling with the **OpenSCAD** language can be really cumbersome and limited.
+const model = difference(cube(20, true), cylinder(30, 6).rotate_x(90));
 
-**scad-js** overcomes these limitations with the power of Javascript.
-
-## Getting started
-First make sure you have [OpenSCAD](https://www.openscad.org/downloads.html) installed on your system, we will use it to visualize the model.
-
-clone [scad-js-starter](https://github.com/scad-js/scad-js-starter):
-
-```bash
-git clone https://github.com/20lives/scad-js-starter.git my-scad-js-project
-cd my-scad-js-project
+console.log(model.serialize({ $fn: 60 }));
 ```
 
-install dependencies and run develpment script:
-
-```bash
-yarn # or npm install
-yarn dev # or npm run dev
+```scad
+$fn = 60;
+difference() {
+  cube(size = 20, center = true);
+  rotate(a = 90, v = [1, 0, 0]) {
+    cylinder(h = 30, r = 6);
+  }
+}
 ```
 
-Now open `index.js` in your favourite text editor and start tinkering.
+Every shape is a plain object with a `type`, its `params` and, for
+transformations, its `children`. `serialize` turns that tree into OpenSCAD
+source; the chainable methods (`translate`, `rotate`, `color`, `linear_extrude`,
+the modifiers `debug`/`disable`/`root`/`background`…) return new nodes, so a
+model is just an expression you can build with functions.
 
-## Documentation
+## Install
 
-For detailed documentation on how to use scad-js visit [scad-js-docs](https://github.com/scad-js/scad-js-docs), you can also look at the official [OpenSCAD Documentation](https://www.openscad.org/documentation.html) page.
+```bash
+pnpm add scad-ts
+```
 
-## Examples
+## ESM only
 
-A good way for learning scad-js and OpenSCAD is throught examples: [examples](https://github.com/scad-js/examples)
+From 1.0.0 this package ships ES modules and nothing else — the CommonJS build
+is gone. `require('scad-ts')` still works on Node 22.12 and newer, which loads
+ES modules from `require`; on anything older, and on bundlers that only read
+CommonJS, it fails. Stay on `0.3.0` if that is you.
+
+## The `openscad` command
+
+The package installs an `openscad` binary that runs your local OpenSCAD:
+
+```bash
+pnpm exec openscad model.scad
+```
+
+It looks at `$OPENSCAD`, then at `OpenSCAD.app` (macOS keeps the binary inside
+an app bundle, off the PATH), then at `openscad` on the PATH. It never installs
+anything; if nothing is found it tells you and exits 127.
+
+## Relationship to `scad-js`
+
+This is a fork of [`scad-js`](https://github.com/scad-js/scad-js) by
+[20lives](https://github.com/20lives), rewritten so the types can be inferred
+from the shape of the code. Upstream declined that restructuring, so the two
+have diverged for good and this is not a drop-in replacement.
+
+## Development
+
+The source of truth is a private monorepo; this repository is a mirror, so its
+tooling (build, tests, TypeScript config) lives upstream and is not replicated
+here. Issues and pull requests are welcome all the same.
 
 ## Acknowledgements
 
-This project was inspired by many other projects: [farrellm/scad-clj](https://github.com/farrellm/scad-clj), [OpenJSCAD.org](https://openjscad.org/), [tasn/scadjs](https://github.com/tasn/scadjs) and more... And of course it would not even exist without [OpenSCAD](https://www.openscad.org) itself.
+`scad-js`, and the projects that inspired it:
+[farrellm/scad-clj](https://github.com/farrellm/scad-clj),
+[OpenJSCAD.org](https://openjscad.org/) and
+[tasn/scadjs](https://github.com/tasn/scadjs). And OpenSCAD itself.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT — see [LICENSE](LICENSE).

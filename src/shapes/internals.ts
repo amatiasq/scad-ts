@@ -1,5 +1,5 @@
-import { chain } from '../util/Chainable';
-import type { Shape } from './index';
+import { chain } from '../util/Chainable.js';
+import type { Shape } from './index.js';
 
 export interface IShape<Name extends string, Params extends {}> {
   type: Name;

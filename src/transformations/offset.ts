@@ -1,8 +1,8 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#offset
 
-import { ScadNumber } from '../types/ScadNumber';
-import type { Chainable } from '../util/Chainable';
-import { ITransformation, transformation } from './internals';
+import { ScadNumber } from '../types/ScadNumber.js';
+import type { Chainable } from '../util/Chainable.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Offset = ITransformation<
   'offset',

@@ -1,11 +1,11 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#rotate
 
-import { ScadNumber } from '../types/ScadNumber';
-import { ScadVector3 } from '../types/ScadVector';
-import { Vector3 } from '../types/Vector';
-import { Chainable, ScadMethods } from '../util/Chainable';
-import { vector3 } from '../util/vector-conversion';
-import { ITransformation, transformation } from './internals';
+import { ScadNumber } from '../types/ScadNumber.js';
+import { ScadVector3 } from '../types/ScadVector.js';
+import { Vector3 } from '../types/Vector.js';
+import { Chainable, ScadMethods } from '../util/Chainable.js';
+import { vector3 } from '../util/vector-conversion.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Rotate = ITransformation<
   'rotate',

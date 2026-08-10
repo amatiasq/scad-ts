@@ -4,14 +4,14 @@ import {
   ScadVector,
   ScadVector2,
   ScadVector3,
-} from '../types/ScadVector';
+} from '../types/ScadVector.js';
 import {
   isVector2,
   isVector3,
   Vector,
   Vector2,
   Vector3,
-} from '../types/Vector';
+} from '../types/Vector.js';
 
 type Guard<T> = (x: any) => x is T;
 

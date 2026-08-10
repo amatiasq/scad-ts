@@ -1,5 +1,5 @@
-import type { Chainable } from '../util/Chainable';
-import { ITransformation, transformation } from './internals';
+import type { Chainable } from '../util/Chainable.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Projection = ITransformation<'projection', { cut: boolean }>;
 

@@ -1,8 +1,8 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder
 
-import { ScadNumber } from '../../types/ScadNumber';
-import { ScadRoundingVariables } from '../../types/ScadRoundingVariables';
-import { IShape, shape } from '../internals';
+import { ScadNumber } from '../../types/ScadNumber.js';
+import { ScadRoundingVariables } from '../../types/ScadRoundingVariables.js';
+import { IShape, shape } from '../internals.js';
 
 type CylinderRadius = { r: ScadNumber } | { r1: ScadNumber; r2: ScadNumber };
 

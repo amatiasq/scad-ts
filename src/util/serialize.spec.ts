@@ -1,5 +1,5 @@
-import assert from 'assert';
-import { cube, sphere, square, union } from '../src/index';
+import assert from 'node:assert';
+import { cube, sphere, square, union } from '../index.js';
 
 describe('Serialize', () => {
   it('should serialize an object number value', () => {

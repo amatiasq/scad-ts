@@ -1,9 +1,9 @@
-import { hull } from '../../operations';
-import { ScadRoundingVariables } from '../../types/ScadRoundingVariables';
-import { Vector3 } from '../../types/Vector';
-import { isNumber } from '../../util/type-guards';
-import { vector3 } from '../../util/vector-conversion';
-import { sphere } from '../3d/sphere';
+import { hull } from '../../operations.js';
+import { ScadRoundingVariables } from '../../types/ScadRoundingVariables.js';
+import { Vector3 } from '../../types/Vector.js';
+import { isNumber } from '../../util/type-guards.js';
+import { vector3 } from '../../util/vector-conversion.js';
+import { sphere } from '../3d/sphere.js';
 
 export function rounded_cube(
   size = rounded_cube.defaultSize,

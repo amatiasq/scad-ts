@@ -1,4 +1,4 @@
-import { Modifier } from '../modifiers';
+import { Modifier } from '../modifiers.js';
 
 const chars = ['*', '!', '#', '%'];
 

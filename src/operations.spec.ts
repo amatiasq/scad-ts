@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from 'node:assert';
 import {
   cube,
   cylinder,
@@ -8,7 +8,7 @@ import {
   minkowski,
   sphere,
   union,
-} from '../src/index';
+} from './index.js';
 
 describe('Union', () => {
   it('Union all aruments together', () => {

@@ -1,5 +1,5 @@
-import assert from 'assert';
-import { cube, square } from '../src/index';
+import assert from 'node:assert';
+import { cube, square } from '../index.js';
 
 describe('Translate', () => {
   it('should add translate transformation to existing object', () => {

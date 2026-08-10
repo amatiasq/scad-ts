@@ -1,11 +1,11 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#translate
 
-import { isScadNumber, ScadNumber } from '../types/ScadNumber';
-import { ScadVector } from '../types/ScadVector';
-import { Vector } from '../types/Vector';
-import { Chainable } from '../util/Chainable';
-import { vector } from '../util/vector-conversion';
-import { ITransformation, transformation } from './internals';
+import { isScadNumber, ScadNumber } from '../types/ScadNumber.js';
+import { ScadVector } from '../types/ScadVector.js';
+import { Vector } from '../types/Vector.js';
+import { Chainable } from '../util/Chainable.js';
+import { vector } from '../util/vector-conversion.js';
+import { ITransformation, transformation } from './internals.js';
 
 export type Translate = ITransformation<'translate', { v: ScadVector }>;
 

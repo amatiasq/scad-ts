@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from 'node:assert';
 import {
   circle,
   cube,
@@ -7,7 +7,7 @@ import {
   polyhedron,
   sphere,
   square,
-} from '../src/index';
+} from '../index.js';
 
 describe('Circle', () => {
   it('should create circle with default radius', () => {

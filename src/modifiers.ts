@@ -1,4 +1,4 @@
-import { chain, Chainable } from './util/Chainable';
+import { chain, Chainable } from './util/Chainable.js';
 
 interface IModified<Name extends string> {
   type: Name;

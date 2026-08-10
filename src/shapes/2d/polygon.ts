@@ -1,11 +1,11 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/2D_Primitives#polygon
 
-import { ScadNumber } from '../../types/ScadNumber';
-import { ScadVector2 } from '../../types/ScadVector';
-import { undef } from '../../types/undef';
-import { Vector2 } from '../../types/Vector';
-import { vector2 } from '../../util/vector-conversion';
-import { IShape, shape } from '../internals';
+import { ScadNumber } from '../../types/ScadNumber.js';
+import { ScadVector2 } from '../../types/ScadVector.js';
+import { undef } from '../../types/undef.js';
+import { Vector2 } from '../../types/Vector.js';
+import { vector2 } from '../../util/vector-conversion.js';
+import { IShape, shape } from '../internals.js';
 
 export type Polygon = IShape<
   'polygon',

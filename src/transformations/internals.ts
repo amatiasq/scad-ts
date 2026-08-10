@@ -1,5 +1,5 @@
-import { chain, Chainable } from '../util/Chainable';
-import { Transformation } from './index';
+import { chain, Chainable } from '../util/Chainable.js';
+import { Transformation } from './index.js';
 
 export interface ITransformation<Name extends string, Params extends {}> {
   type: Name;

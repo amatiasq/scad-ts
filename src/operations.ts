@@ -1,5 +1,5 @@
-import { chain, Chainable } from './util/Chainable';
-import { ScadSerializeMethod } from './util/Serializable';
+import { chain, Chainable } from './util/Chainable.js';
+import { ScadSerializeMethod } from './util/Serializable.js';
 
 interface IOperation<Name extends string> {
   type: Name;

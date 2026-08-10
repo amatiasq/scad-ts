@@ -1,8 +1,8 @@
-import { ScadNumber } from '../types/ScadNumber';
-import { isScadStatement } from '../types/ScadStatement';
-import { isScadUndef, undef } from '../types/undef';
-import { isScadModifier } from './isScadModifier';
-import { Serializable } from './Serializable';
+import { ScadNumber } from '../types/ScadNumber.js';
+import { isScadStatement } from '../types/ScadStatement.js';
+import { isScadUndef, undef } from '../types/undef.js';
+import { isScadModifier } from './isScadModifier.js';
+import { Serializable } from './Serializable.js';
 
 // type KeysOfUnion<T> = T extends T ? keyof T: never;
 // type ValuesOfUnion<T, K extends keyof T> = T extends keyof T ? keyof T: never;

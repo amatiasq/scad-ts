@@ -1,5 +1,5 @@
-import assert from 'assert';
-import { rounded_cube, rounded_square } from '../src/index';
+import assert from 'node:assert';
+import { rounded_cube, rounded_square } from '../../index.js';
 
 const test_rounded_square = (size = 1, r = 0.125) => ({
   type: 'translate',

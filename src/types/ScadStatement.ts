@@ -1,4 +1,4 @@
-import { ScadVariable } from './ScadVariable';
+import { ScadVariable } from './ScadVariable.js';
 
 type ScadOperation = '+' | '-' | '*' | '/';
 

@@ -1,4 +1,4 @@
-import { ScadNumber } from './ScadNumber';
+import { ScadNumber } from './ScadNumber.js';
 
 export type Vector2<T = ScadNumber> = readonly [T, T] | [T, T] | { x: T; y: T };
 export type Vector3<T = ScadNumber> =

@@ -1,5 +1,5 @@
-import { Scad } from '../types/Scad';
-import { serialize } from './serialize';
+import { Scad } from '../types/Scad.js';
+import { serialize } from './serialize.js';
 
 export interface ScadSerializeMethod {
   serialize: typeof serialize;
