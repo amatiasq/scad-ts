@@ -58,12 +58,6 @@ This is a fork of [`scad-js`](https://github.com/scad-js/scad-js) by
 from the shape of the code. Upstream declined that restructuring, so the two
 have diverged for good and this is not a drop-in replacement.
 
-## Development
-
-The source of truth is a private monorepo; this repository is a mirror, so its
-tooling (build, tests, TypeScript config) lives upstream and is not replicated
-here. Issues and pull requests are welcome all the same.
-
 ## Acknowledgements
 
 `scad-js`, and the projects that inspired it:

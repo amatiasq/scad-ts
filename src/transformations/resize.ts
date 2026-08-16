@@ -1,6 +1,6 @@
 // https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize
 
-import { ScadNumber } from '../index.js';
+import { ScadNumber } from '../types/ScadNumber.js';
 import { ScadVector, ScadVector3 } from '../types/ScadVector.js';
 import { Vector, Vector3 } from '../types/Vector.js';
 import type { Chainable } from '../util/Chainable.js';

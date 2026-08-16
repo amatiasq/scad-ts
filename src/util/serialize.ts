@@ -4,12 +4,8 @@ import { isScadUndef, undef } from '../types/undef.js';
 import { isScadModifier } from './isScadModifier.js';
 import { Serializable } from './Serializable.js';
 
-// type KeysOfUnion<T> = T extends T ? keyof T: never;
-// type ValuesOfUnion<T, K extends keyof T> = T extends keyof T ? keyof T: never;
-
 type SerializableWithParams = Extract<Serializable, { params: any }>;
 type Params = SerializableWithParams['params'];
-// type Keys = KeysOfUnion<Params>
 type Value = any;
 type Variables = Record<string, ScadNumber>;
 
